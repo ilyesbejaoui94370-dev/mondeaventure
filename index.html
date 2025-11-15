@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Mon Histoire Interactive</title>
+<meta name="description" content="Vivez une aventure interactive où vos choix influencent l’histoire.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body { font-family: Arial, sans-serif; background-color: #f0f0f0; margin:0; padding:0; }
+    header { background-color: #333; color:white; text-align:center; padding:20px; }
+    main { padding:20px; max-width:800px; margin:auto; }
+    .chapter { display:none; }
+    .choices button {
+        margin:5px; padding:10px 20px; font-size:16px; cursor:pointer;
+        border:none; border-radius:6px; background:#4CAF50; color:white;
+    }
+    .choices button:hover { background:#45a049; }
+    #progress { text-align:right; font-size:14px; margin-bottom:10px; color:#555; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Mon Histoire Interactive</h1>
+</header>
+
+<main>
+    <div id="progress">Chapitre 1 sur 3</div>
+
+    <div id="chapter1" class="chapter">
+        <h2>Chapitre 1 : Le Début</h2>
+        <p>Tu te réveilles dans un monde mystérieux, entouré d’arbres gigantesques et de bruits étranges...</p>
+        <div class="choices">
+            <button onclick="nextChapter(2)">Explorer la forêt</button>
+            <button onclick="nextChapter(3)">Aller vers le village proche</button>
+        </div>
+    </div>
+
+    <div id="chapter2" class="chapter">
+        <h2>Chapitre 2 : La Forêt</h2>
+        <p>En explorant la forêt, tu trouves un vieux monolithe couvert de symboles inconnus...</p>
+        <div class="choices">
